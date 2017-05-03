@@ -11,7 +11,6 @@ func main() {
 		fmt.Print("Enter string to encrypt: ")
 		var input string
 		fmt.Scanln(&input)
-		fmt.Print()
 		hashedPassword, err := bcrypt.GenerateFromPassword([]byte(input), bcrypt.DefaultCost)
 		if err != nil {
 			fmt.Errorf("Error while hashing: %s", err)
